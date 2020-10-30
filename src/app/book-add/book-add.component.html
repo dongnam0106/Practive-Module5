@@ -1,0 +1,27 @@
+<app-nav-bar>
+  <p>ADD/EDIT BOOK</p>
+</app-nav-bar>
+<form (ngSubmit)="onSubmit()" [formGroup]="bookForm" class="form-group" >
+  <table id="add-table" cellpadding="7px">
+    <tr>
+      <td><label for="book-title">Books name:</label></td>
+      <td><input type="text" id="book-title" [formControl]="bookTitle" class="form-control"></td>
+    </tr>
+    <tr>
+      <td><label for="book-author">Author:</label></td>
+      <td><input type="text" id="book-author" [formControl]="bookAuthor" class="form-control"></td>
+    </tr>
+    <tr>
+      <td><label for="book-description">Description:</label></td>
+      <td><textarea id="book-description" cols="30" rows="10" [formControl]="bookDescription" class="form-control"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <button type="submit" class="btn btn-outline-info">{{buttonLabel}}</button>
+        <button routerLink="" class="btn btn-outline-danger">Back</button>
+      </td>
+    </tr>
+  </table>
+
+</form>
+<p class="alert alert-success" *ngIf="message">{{message}}</p>

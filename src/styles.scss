@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap.scss";
+#list-table {
+  border: solid 2px black;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#add-table {
+  border-collapse: separate;
+  border-spacing: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 2px blue;
+}
+
+app-nav-bar p{
+  text-align: center;
+  font-size: 30px;
+  color: cornflowerblue;
+  text-shadow: 2px -2px 4px cornflowerblue;
+}
+
+#list-length {
+  text-align: center;
+  text-decoration-line: underline;
+}
+
+button{
+  margin: 5px;
+}
+
+input, textarea {
+  padding: 5px;
+}
+
+.mess {
+  text-align: center;
+  color: blue;
+}
+
+
+html, body { height: 100%; }
+body { margin-left: 25%; margin-right: 25%; margin-top: 50px; font-family: Roboto, "Helvetica Neue", sans-serif;
+  //background-image: url("images/background2.png");
+  background-color: #ffedef;
+}

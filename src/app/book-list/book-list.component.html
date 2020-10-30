@@ -1,0 +1,24 @@
+<app-nav-bar>
+  <p>LIST BOOKS</p>
+</app-nav-bar>
+<p id = "list-length">*** There are {{bookList.length}} books ***</p>
+<button routerLink="create" class="btn btn-outline-info">Add book</button>
+<table class="table table" id="list-table">
+  <thead>
+  <tr>
+    <td>#</td>
+    <td>Books name</td>
+    <td>Author</td>
+    <td colspan="2">Manipulation</td>
+  </tr>
+  </thead>
+  <ng-container *ngFor="let book of bookList; index as i">
+    <tr>
+      <td>{{i+1}}</td>
+      <td><a [routerLink]="['books', book.id]">{{book.title}}</a></td>
+      <td>{{book.author}}</td>
+      <td><a [routerLink]="['books', book.id, 'delete']">Delete</a></td>
+      <td><a [routerLink]="['books', book.id, 'edit']">Edit</a></td>
+    </tr>
+  </ng-container>
+</table>

@@ -1,0 +1,18 @@
+<app-nav-bar>
+  <p>DELETE BOOK</p>
+</app-nav-bar>
+<div>
+  <label for="book-title">Books name: </label>
+  <span id="book-title">{{book.title}}</span>
+</div>
+<div>
+  <label for="book-author">Author: </label>
+  <span id="book-author">{{book.author}}</span>
+</div>
+<div>
+  <label for="book-description">Description: </label>
+  <p id="book-description">{{book.description}}</p>
+</div>
+<button (click)="onDelete()" class="btn btn-outline-warning">Delete</button>
+<button routerLink="" class="btn btn-outline-danger">Back</button>
+<p class="alert alert-success" *ngIf="message">{{message}}</p>
